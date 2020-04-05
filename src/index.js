@@ -22,12 +22,15 @@ function findCountry(e) {
         refs.countrylistSearch.innerHTML = countryList(data);
         return;
       } else if (data.length >= 11) {
+        
         PNotify.error({
+          title: 'Oh No!',
           text: 'Too many matches found, enter more specific query',
           delay: 500,
-        });
-      }
+        });        
+      }   return;    
     });
+    
   }
   refs.countrylistSearch.innerHTML = '';
 };
